@@ -13,7 +13,7 @@ void AMyProject8Character::SetupPlayerInputComponent(class UInputComponent* Play
 	// Character Movement
 	check(PlayerInputComponent);
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AMyProject8Character::JumpButtonPressed);
-  PlayerInputComponent->BindAction("Fly", IE_Released, this, &AMyProject8Character::Flying);
+ 	PlayerInputComponent->BindAction("Fly", IE_Released, this, &AMyProject8Character::Flying);
 	PlayerInputComponent->BindAction("StopFlying", IE_Pressed, this, &AMyProject8Character::StopFlying);
 	PlayerInputComponent->BindAction("Dash", IE_Pressed, this, &AMyProject8Character::Dashing);
 }
@@ -26,11 +26,6 @@ void AMyProject8Character::JumpButtonPressed()
 
 void AMyProject8Character::Jump()
 {
-	/*if (JumpCtr == 0)
-	{
-		ACharacter::LaunchCharacter(FVector(0, 0, JumpHeight), false, false);
-	}*/
-
 	if (GetCharacterMovement()->IsFalling() || GetCharacterMovement()->IsFlying())
 	{
 		GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_Flying);
