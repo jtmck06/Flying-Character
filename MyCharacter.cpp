@@ -4,7 +4,7 @@
 
 AMyProject8Character::AMyProject8Character(): RunningSpeed(650.f), JumpHeight(650.f)
 {
-  GetCharacterMovement()->MaxWalkSpeed = RunningSpeed;
+  	GetCharacterMovement()->MaxWalkSpeed = RunningSpeed;
 	GetCharacterMovement()->MaxFlySpeed = RunningSpeed;
 }
 
